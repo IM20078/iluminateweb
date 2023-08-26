@@ -116,7 +116,15 @@ section#services h2 {
   font-size: 24px;
   margin-bottom: 30px;
 }
-
+.t1{
+  width:900px;
+}
+.t2{
+  text-align:center;
+}
+.precios{
+  text-align:center;
+}
 section#services .service {
   margin-bottom: 30px;
   display: flex;
@@ -132,7 +140,12 @@ button {
   padding: 10px 20px;
   cursor: pointer;
 }
-
+.precios{
+  margin:0 auto;
+  margin-bottom:5px;
+  font-size:20px;
+  text-align:center;
+}
 
 
 a {
@@ -337,8 +350,8 @@ footer {
     flex-direction: column; /* Apilamos los paquetes uno encima del otro */
   }
   .package-card {
-    width: 100%; /* Cambiamos el ancho para que ocupen todo el espacio disponible */
-    margin: 10px 0; /* Agregamos margen superior e inferior para separar los paquetes */
+    width: 80%; /* Cambiamos el ancho para que ocupen todo el espacio disponible */
+    margin: 10px auto; /* Agregamos margen superior e inferior para separar los paquetes */
   }
 
 }
