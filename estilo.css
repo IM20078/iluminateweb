@@ -109,6 +109,7 @@ section#services {
   color: #333333;
   position: relative;
   bottom: 4px;
+  width:100%;
 }
 
 section#services h2 {
@@ -116,9 +117,8 @@ section#services h2 {
   font-size: 24px;
   margin-bottom: 30px;
 }
-.t1{
-  width:900px;
-}
+
+.ti,
 .t2{
   text-align:center;
 }
