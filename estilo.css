@@ -1,60 +1,92 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-
-/* Estilos generales */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   color: #333;
   margin: 0;
   padding: 0;
   background-color: #F5F5DC;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal */
+  width: 100%; /* Establece el ancho máximo del cuerpo */
+  margin: 0 auto; /* Centra el contenido horizontalmente */
 }
 
-/* Contenedor principal */
+/* Estilos del logotipo */
+.logo {
+  width: 60px;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Estilos de la barra de navegación */
+nav {
+  position: relative;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 10px;
+}
+
+nav .logo {
+  position: absolute;
+  left: 0;
+  top: 75%;
+  transform: translateY(-50%);
+}
+
+/* Estilos de los enlaces en el hover */
+.links:hover {
+  background: linear-gradient(90deg, #EBF5FB, #3498DB, #21618C);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.svg1{
+  background-color:#F5F5DC;
+  padding:0px;
+  margin:0px;
+}
+.svg2{
+  background-color:#F5F5DC;
+  margin-top:-4px;
+}
+/* Estilos del contenedor principal */
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Barra de navegación */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
+/* Estilos del encabezado */
+header {
   background-color: #1e1e1e;
   color: #fff;
+  padding: 10px;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 10px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #fff;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #01ffac;
-}
-
-/* Logo en la barra de navegación */
-.nav-logo {
-  width: 60px;
-  height: auto;
-}
-
-/* Sección de héroe */
+/* Estilos de la sección hero */
 section#hero {
   text-align: center;
   padding: 50px 0;
+  align-items: center;
+  width: 100vw;
+  display: inline-block;
   background-color: #1e1e1e;
   color: #fff;
+  text-decoration: none;
+  margin: 0; /* Quita cualquier margen */
+  padding: 0; 
 }
 
 section#hero h1 {
@@ -66,11 +98,17 @@ section#hero p {
   margin-bottom: 30px;
 }
 
-/* Sección de servicios */
+section#hero .btn:hover {
+  background-color: #01ffac;
+}
+
+/* Estilos de la sección de servicios */
 section#services {
   background-color: #F5F5DC;
   padding: 50px 0;
   color: #333333;
+  position: relative;
+  bottom: 4px;
 }
 
 section#services h2 {
@@ -79,21 +117,73 @@ section#services h2 {
   margin-bottom: 30px;
 }
 
-.service {
+section#services .service {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+section#services h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+section#services p {
+  font-size: 16px;
+}
+
+/* Estilos de la sección de portfolio */
+section#portfolio h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.iw {
+  font-size:50px;
+  font-family: 'Permanent Marker', cursive;
+  background: linear-gradient(90deg, #EBF5FB, #3498DB, #21618C);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+section#portfolio .project {
   margin-bottom: 30px;
   text-align: center;
 }
 
-/* Paquetes */
-.packages {
+section#portfolio .project img {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.container1 {
   display: flex;
+  justify-content: space-between;
+}
+.packages {
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
   max-width: 1000px;
   margin: 0 auto;
 }
-
 .package-card {
   flex: 1;
   background-color: #fff;
@@ -101,41 +191,44 @@ section#services h2 {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
-  width: calc(33.33% - 20px);
+  width: 30%; /* Ancho de cada paquete */
+  margin: 0 10px; /* Espacio entre los paquetes */
 }
-
 .package-card h2 {
   font-size: 24px;
   margin-bottom: 10px;
 }
-
 .package-card .price {
   font-size: 28px;
   color: #0056b3;
   margin-bottom: 20px;
 }
-
 .package-card .features {
   list-style: none;
   padding: 0;
   margin: 0 0 20px;
 }
-
 .package-card .features li {
   margin-bottom: 8px;
 }
-
-/* Sección de contacto */
+/* Estilos de la sección de contacto */
 section#contact {
   background-color: #CCCCCC;
   color: #fff;
-  padding: 50px 0;
+  position: relative;
+  bottom: 5px;
 }
 
 section#contact h2 {
   text-align: center;
+  position: relative;
+  bottom: 60px;
   font-size: 24px;
   margin-bottom: 30px;
+}
+
+#contact {
+  background-color: #f2f2f2;
 }
 
 section#contact input,
@@ -143,7 +236,6 @@ section#contact textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
-  border: none;
 }
 
 section#contact button {
@@ -152,22 +244,20 @@ section#contact button {
   border: none;
   padding: 10px 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 section#contact button:hover {
   background-color: #0056b3;
 }
 
-/* Pie de página */
+/* Estilos del pie de página */
 footer {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 10px;
 }
 
-/* Botón de WhatsApp */
+/* Estilos del botón de WhatsApp */
 .whatsapp-button {
   position: fixed;
   bottom: 20px;
@@ -186,18 +276,39 @@ footer {
   z-index: 9999;
 }
 
-/* Menú responsive */
+/* Estilos para el menú responsive */
 .abrir-menu {
   display: none;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: auto; /* Alinea el botón de la hamburguesa a la derecha */
+}
+
+.abrir-menu i {
+  color: #fff;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list li {
+  margin-right: 10px;
 }
 
 @media (max-width: 768px) {
   .abrir-menu {
     display: block;
   }
-
-  nav ul {
+  header{
+    color:black;
+  }
+  .nav-list {
     display: none;
+    color: black;
     flex-direction: column;
     background-color: #F5F5DC;
     padding: 20px;
@@ -207,34 +318,50 @@ footer {
     right: 0;
   }
 
-  nav ul.active {
-    display: flex;
-  }
-
-  nav ul li {
+  .nav-list li {
     margin-bottom: 10px;
   }
 
-  .package-card {
-    width: 100%;
-    margin: 10px 0;
+  .nav-list li:last-child {
+    margin-bottom: 0;
   }
+
+  .nav-list li a {
+    color: black;
+  }
+
+  .active {
+    display: block;
+  }
+  .container1 {
+    flex-direction: column; /* Apilamos los paquetes uno encima del otro */
+  }
+  .package-card {
+    width: 100%; /* Cambiamos el ancho para que ocupen todo el espacio disponible */
+    margin: 10px 0; /* Agregamos margen superior e inferior para separar los paquetes */
+  }
+
 }
 
 @media (max-width: 480px) {
   .abrir-menu {
+    display: block;
+    margin-left: auto; /* Alinea el botón de la hamburguesa a la derecha */
     margin-right: 10px;
   }
-  
-  nav ul li {
-    margin-left: 0;
+  a {
+    color: #fff;
   }
-  
-  .nav-logo {
+  .logo {
+    display: block;
     margin-bottom: 10px;
   }
 
-  .package-card {
-    width: 70%;
+  nav ul li {
+    margin-left: 0;
+  }
+  .svg1{
+    position:relative;
+    bottom:1px;
   }
 }
