@@ -365,7 +365,7 @@ footer {
     bottom:1px;
   }
    .package-card {
-    width: 100%; /* Cambiamos el ancho para que ocupen todo el espacio disponible */
+    width: 70%; /* Cambiamos el ancho para que ocupen todo el espacio disponible */
     margin: 10px 0; /* Agregamos margen superior e inferior para separar los paquetes */
   }
 }
