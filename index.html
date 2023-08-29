@@ -8,14 +8,12 @@
   <meta name="google-site-verification" content="xY3L2uPGL9tvAKPKL8XU1xnRLXfQ0XergwBgIQEezcY" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="https://cdn.glitch.global/881b14f1-45c6-4090-8c58-23a1dc28d81d/logo_transparent.png?v=1690051460736" type="image/x-icon">
 
   <title>Iluminate Web</title>
   <link rel="stylesheet" href="estilo.css">
-  <script src="script.js"></script>
 </head>
 <body>
-    <header>
+   <!-- <header>
     <nav>
       <img class="logo" src="https://cdn.glitch.global/881b14f1-45c6-4090-8c58-23a1dc28d81d/logo_transparent.png?v=1690051460736" alt="">
       <button class="abrir-menu">
@@ -28,7 +26,28 @@
         <li><a class="links" href="#contact">Contacto</a></li>
       </ul>
     </nav>
-  </header>
+  </header>-->
+
+  <div id="menu-container">
+    <div id="menu-wrapper">
+       <div id="hamburger-menu"><span></span><span></span><span></span></div>
+       <!-- hamburger-menu -->
+    </div>
+    <!-- menu-wrapper -->
+    <ul class="menu-list accordion">
+       <li id="nav1" class="toggle accordion-toggle"> 
+        <a class="menu-link" href="#hero">Inicio</a></li>
+ 
+        <li id="nav1" class="toggle accordion-toggle"><a class="head" href="#services">Servicios</a></li>
+        <li id="nav1" class="toggle accordion-toggle"><a class="head" href="#precio">Precios</a></li>
+        <li id="nav1" class="toggle accordion-toggle"><a class="head" href="#contact">Contacto</a></li>
+
+   
+    </ul>
+    <!-- menu-list accordion-->
+ </div>
+ <!-- menu-container -->
+
   
   <section id="hero">
     <div class="container">
@@ -125,5 +144,10 @@
       <p>Iluminate Web &copy; 2023</p>
     </div>
   </footer>
+
+
+
+  <script src="java.js"></script>
+
 </body>
 </html>
