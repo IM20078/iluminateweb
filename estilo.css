@@ -421,12 +421,7 @@ footer {
 
 
 @media (max-width: 768px) {
-  .abrir-menu {
-    display: block;
-  }
-  header{
-    color:black;
-  }
+
   
  
   .container1 {
@@ -440,22 +435,14 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .abrir-menu {
-    display: block;
-    margin-left: auto; /* Alinea el botón de la hamburguesa a la derecha */
-    margin-right: 10px;
-  }
-  a {
-    color: #fff;
-  }
+
+
   .logo {
     display: block;
     margin-bottom: 10px;
   }
 
-  nav ul li {
-    margin-left: 0;
-  }
+
   .svg1{
     position:relative;
     bottom:1px;
